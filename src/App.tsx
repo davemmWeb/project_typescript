@@ -1,42 +1,42 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import Search from './components/Search/Search';
-import Form from './components/Form/Form';
-import { Sub } from './types';
+import AddCharacter from './components/AddCharacter/AddCharacter';
+import ListCharacters from './components/ListCharacters/ListCharacters';
+import { Character } from './types';
 
 const INITIAL_STATE = [
   {
-  nick : 'dapelu',
-  subMonths : 3,
-  avatar : "https://i.pravatar.cc/150?u=dapelu",
-  description : "Dapelu hace de moderador a veces"
+    name : 'goku',
+    image : 'https://th.bing.com/th/id/OIP.G8PgE5TFJ409XbBK-lC5KwHaI4?pid=ImgDet&rs=1',
+    fightLevel : 100,
+    description : 'el sayayin mas fuerte'
   },
   {
-    nick : 'goku',
-    subMonths : 4,
-    avatar : "https://i.pravatar.cc/150?u=goku"       
-  }
-]
+    name : 'vegeta',
+    image : 'https://th.bing.com/th/id/R.435954deb66dfdbe774f64919df1b172?rik=4doKApL0B8R3Rg&riu=http%3a%2f%2fpostfiles6.naver.net%2f20160608_37%2ftjdgkr6936_14653668669338dPGS_JPEG%2fwon2_20160608_150114.jpg%3ftype%3dw2&ehk=Rr01oONDRvgWm9yBiiBISWYNYU0OQHGgGJNvHqWRvPc%3d&risl=&pid=ImgRaw&r=0',
+    fightLevel : 90,
+    description : 'el principe de los sayayin'
+  },
 
-interface AppState {
-  subs : Array<Sub>
+] 
+interface States {
+  characters : Array<Character>
 }
 
+
 function App() {
-  const [subs, setSubs] = useState<AppState["subs"]>([])
-
-    useEffect(()=>{
-        setSubs(INITIAL_STATE)
-    },[])
-
-    const handleNewSub = (newSub : Sub) : void => {
-      setSubs(subs => [...subs, newSub])
-    }
+  const [characters, setCharacters] = useState<States['characters']>([])
   
+  useEffect(()=>{
+    setCharacters(INITIAL_STATE)
+  },[])
+
   return (
     <div className="App">
-      <Form onNewSub={handleNewSub}/>
-      <Search subs={subs}/>      
+        <h1>Characters Dragon Ball</h1>
+        <AddCharacter newCharacter={setCharacters}/>
+        <ListCharacters characters={characters}/>
+        
     </div>
   );
 }
