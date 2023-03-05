@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/project_typescript/static/css/main.044acc42.css",
+    "main.js": "/project_typescript/static/js/main.43583a46.js",
+    "static/js/787.7b2a2d8f.chunk.js": "/project_typescript/static/js/787.7b2a2d8f.chunk.js",
+    "static/media/kame- house.jfif": "/project_typescript/static/media/kame- house.168b4110af67d35c1087.jfif",
+    "static/media/Saiyan-Sans.ttf": "/project_typescript/static/media/Saiyan-Sans.daf700d2a47edf876686.ttf",
+    "index.html": "/project_typescript/index.html",
+    "main.044acc42.css.map": "/project_typescript/static/css/main.044acc42.css.map",
+    "main.43583a46.js.map": "/project_typescript/static/js/main.43583a46.js.map",
+    "787.7b2a2d8f.chunk.js.map": "/project_typescript/static/js/787.7b2a2d8f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.044acc42.css",
+    "static/js/main.43583a46.js"
+  ]
+}
