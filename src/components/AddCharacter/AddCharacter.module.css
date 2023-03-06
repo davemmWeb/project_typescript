@@ -1,14 +1,58 @@
 .container{
+    width: 100%;
+}
+form{
     display: flex;
     flex-wrap: wrap;    
     justify-content: center;
     align-content: center;
-}
-input {
-    margin-left: 3%;
-}
-textarea{
-    margin-left: 3%;
-    position: fixed;
-}
 
+}
+input, textarea, select{
+    margin-left: 2%;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: solid 1px white;    
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+button{
+    margin-top: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 20%;
+    border: solid 1px white;    
+    font-size: 1em;
+    border-radius: 5px;
+}
+button:hover{
+    -webkit-animation: rotate-scale-up-hor 0.65s linear both;
+	        animation: rotate-scale-up-hor 0.65s linear both;
+}
+@-webkit-keyframes rotate-scale-up-hor {
+    0% {
+      -webkit-transform: scale(1) rotateX(0);
+              transform: scale(1) rotateX(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateX(-180deg);
+              transform: scale(2) rotateX(-180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateX(-360deg);
+              transform: scale(1) rotateX(-360deg);
+    }
+  }
+  @keyframes rotate-scale-up-hor {
+    0% {
+      -webkit-transform: scale(1) rotateX(0);
+              transform: scale(1) rotateX(0);
+    }
+    50% {
+      -webkit-transform: scale(2) rotateX(-180deg);
+              transform: scale(2) rotateX(-180deg);
+    }
+    100% {
+      -webkit-transform: scale(1) rotateX(-360deg);
+              transform: scale(1) rotateX(-360deg);
+    }
+  }

@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { ReactElement, useState } from 'react'
+import { TypeElement } from 'typescript'
 import { Character } from '../../types'
 import styles from "./AddCharacter.module.css"
 
@@ -29,12 +30,23 @@ const AddCharacter = ({newCharacter}: propsForm) => {
         event.preventDefault()
         newCharacter(character => [...character, inputsValues])
     }
+
+    const level : Array<ReactElement> = []
+
+    for (let i = 0; i <= 100; i++) {
+        level.push(<option key={i} value={i}>{i}</option>)
+    }
+
   return (
     <div className={styles.container}>
         <form onSubmit={handlerSubmit}>
             <input value={inputsValues.name} type="text"placeholder='Add name'  name='name' onChange={handlerChange}/>
             <input value={inputsValues.image} type="text"placeholder='Add "URL" image' name='image' onChange={handlerChange}/>
-            <input value={inputsValues.fightLevel} type="number"placeholder='Add fight level' name='fightLevel' onChange={handlerChange}/>
+            <select name="" id="">
+                <option value="">Level</option>
+                {level}
+            </select>
+            
             <textarea value={inputsValues.description} placeholder='Add description' name='description' onChange={handlerChange}/>
             <button >Add new character</button>
         </form>    
