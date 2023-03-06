@@ -1,7 +1,7 @@
 export interface Character {
   name : string
   image : string
-  fightLevel : number
+  fightLevel : string
   description? : string
 }
 
