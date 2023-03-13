@@ -5,10 +5,11 @@
     margin: 0 auto;
     justify-content: space-around;
 }
-.containerCharacter {
+.containerChar {
     margin-top: 1rem;
     border: solid 1px grey;
     background-color: rgba(150, 150, 150, 0.5);
+    margin-left: 2em;
 }
 h1{
     font-family: 'saiyans', sans-serif;
@@ -18,3 +19,9 @@ img{
     width: 60%;
     height: 10em;
   }
+select{
+    width: 30%;
+    border: solid 1px white;
+    background-color: rgba(150, 150, 150, 0.5);
+    border-radius: 4em;
+}  

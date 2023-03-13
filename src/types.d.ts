@@ -5,4 +5,10 @@ export interface Character {
   description? : string
 }
 
+export interface CharacterState {
+  characterCount: number
+  characters : Character[]
+  transformado : string
+}
+
 
